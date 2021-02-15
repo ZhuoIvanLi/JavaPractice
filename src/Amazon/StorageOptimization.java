@@ -7,6 +7,8 @@ package Amazon;
  *
  * input: n = 6, m = 5, h = [1,2,3], v = [1,2]
  * output: 4 * 3 = 12
+ *
+ * Solution: find the max adjacency for x and y
  */
 public class StorageOptimization {
     public static void main(String[] args) {

@@ -30,6 +30,8 @@ import java.util.Queue;
  * #
  * # Complexity:
  * # O(M*N)
+ *
+ * Solution: BFS
  */
 public class DemolitionRobot {
     public static void main(String[] args) {
