@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/CallCenter.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/CardGame.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/CharServer.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/Jigsaw.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/JukeBox.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/OnlineBookReader.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/ParkingLot.java" />
+      <file url="file://$PROJECT_DIR$/src/SystemDesign/SystemDesign.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/Minesweeper.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/Othello.java" />
+      <file url="file://$PROJECT_DIR$/src/ObjectOrientedDesign/CircularArray.java" />
+      <file url="file://$PROJECT_DIR$/src/Recursion/StackOfBoxes.java" />
+      <file url="file://$PROJECT_DIR$/src/Moderate/TicTacWin.java" />
+      <file url="file://$PROJECT_DIR$/src/Moderate/BisectSquares.java" />
+      <file url="file://$PROJECT_DIR$/src/LinkedList.java" />
+      <file url="file://$PROJECT_DIR$/src/Moderate/XMLEncoding.java" />
+      <file url="file://$PROJECT_DIR$/src/MyComparator.java" />
+      <file url="file://$PROJECT_DIR$/src/Amazon/SerializeDeserializeBinaryTree.java" />
+      <file url="file://$PROJECT_DIR$/src/Amazon/SlidingWindowMaximum.java" />
+      <file url="file://$PROJECT_DIR$/src/Amazon/FetchItem.java" />
+    </excludeFromCompile>
+  </component>
+</project>
