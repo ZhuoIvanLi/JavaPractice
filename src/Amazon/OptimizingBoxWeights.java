@@ -21,9 +21,9 @@ import java.util.List;
  */
 public class OptimizingBoxWeights {
     public static void main(String[] args) {
-        int[] inter = {20, 15, 20, 50, 20}; // {1,2,5,8,4};
+        int[] inter = {10, 9, 9, 6, 5, 4, 3, 2, 1}; // {1,2,5,8,4};
 
-        int[] a = getArray(5, inter);
+        int[] a = getArray(9, inter);
 
         for (int aa : a) {
             System.out.println(aa);
@@ -36,8 +36,8 @@ public class OptimizingBoxWeights {
         int count = 1;
 
         // Get sorted list with integer array
-        for (int i = 0; i < a.length; i++) {
-            while (i + 1 < a.length && a[i] == a[i + 1]) {
+        for (int i = 0; i < size; i++) {
+            while (i + 1 < size && a[i] == a[i + 1]) {
                 count++;
                 i++;
             }
@@ -47,6 +47,7 @@ public class OptimizingBoxWeights {
             count = 1;
         }
 
+        // get the sum
         int sum = 0;
         for (Integer[] all : al) {
             sum += all[0];
@@ -74,6 +75,7 @@ public class OptimizingBoxWeights {
         List<Integer[]> addNew = new ArrayList<>(helper);
         addNew.add(new Integer[]{al.get(len)[0], al.get(len)[1]});
 
+        // use or not use current node
         List<Integer[]> left = findCombination(al, total + al.get(len)[0], sum, len - 1, addNew);
         List<Integer[]> right = findCombination(al, total, sum, len - 1, helper);
 
@@ -81,6 +83,7 @@ public class OptimizingBoxWeights {
             return left == null ? right : left;
         }
 
+        // Calculate number of left and right and find the answer
         int numLeft = 0, numRight = 0;
         int totalLeft = 0, totalRight = 0;
         for (Integer[] l : left){
