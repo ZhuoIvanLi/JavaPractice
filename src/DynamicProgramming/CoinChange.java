@@ -45,7 +45,7 @@ public class CoinChange {
         int min = Integer.MAX_VALUE;
         for(int coin : a) {
             int res = coinChange(a, n - coin, count);
-            if(res >= 0 && res < min){
+            if (res >= 0 && res < min){
                 min = res + 1; // last minimum + this step
             }
         }

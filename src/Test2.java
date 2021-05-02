@@ -1,38 +1,126 @@
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
-/**
- * 
- */
+
 public class Test2 {
-    public static void main(String[] args) {
-        List<String> ori = new ArrayList<>();
-        ori.add("one");
-        ori.add("two");
-        ori.add("three");
+    private Node node;
+    private String type;
 
-        List<String> add = new ArrayList<>();
-        add.add("one");
-        add.add("two");
-        add.add("five");
-        add.add("six");
+    class AnyArray<T> {
+        T[] AnyArray;
 
-        List<String> delete = new ArrayList<>();
-        delete.add("two");
-        delete.add("five");
+    }
+
+    private class Node {
+        private Integer toInteger;
+        private String toString;
+        private Node next;
+    }
+
+    public Test2(String type) {
+        node = new Node();
+        this.type = type;
+    }
+
+    public void push(String type, Object inte) throws Exception {
+        if (type.equals("test")) {
+            node.toInteger = (Integer) inte;
+        } else {
+            throw new Exception("tfgf");
+        }
+    }
+
+    public void pop(Object o){}
+
+    public int size() {
+        int temp = 0;
+        return 0;
+    }
+
+    public void limiter() {
+
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("H:\\Temp\\1.in");
+        Scanner sc = new Scanner(file);
+
+        long n = 0, count = 3;
+        long r = 0, e = 0, c;
+        while (sc.hasNextLong()) {
+            long current = sc.nextLong();
+
+            if (n == 0) {
+                n = current;
+            } else {
+                if (count == 3){
+                    r = current;
+                    count--;
+                } else if (count == 2) {
+                    e = current;
+                    count--;
+                } else if (count == 1) {
+                    c = current;
+
+                    long adv = e - c;
+                    if (r < adv){
+                        System.out.println("advertise");
+                    } else if (r == adv) {
+                        System.out.println("does not matter");
+                    } else {
+                        System.out.println("do not advertise");
+                    }
+                    count = 3;
+                }
+            }
+            String s = "test";
+            boolean i = s.contains("tet");
 
 
-
-
-        int[] a = {7,21,42,3}; //{8,24,3,20,19,1};
-        int[] b = {2, 4,50,20,10,6};
-
-        LocalDate ld = LocalDate.of(2021, 02, 10);
-        System.out.println(ld.getDayOfWeek());
-
+            //System.out.println(sc.next());
+        }
 
 
 
     }
 }
+
+//import java.util.Scanner;
+//public class ProblemA {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        long n = 0, count = 3;
+//        long r = 0, e = 0, c;
+//        while (sc.hasNextLong()) {
+//            long current = sc.nextLong();
+//
+//            if (n == 0) {
+//                n = current;
+//            } else {
+//                if (count == 3) {
+//                    r = current;
+//                    count--;
+//                } else if (count == 2) {
+//                    e = current;
+//                    count--;
+//                } else if (count == 1) {
+//                    c = current;
+//
+//                    long adv = e - c;
+//                    if (r < adv) {
+//                        System.out.println("advertise");
+//                    } else if (r == adv) {
+//                        System.out.println("does not matter");
+//                    } else {
+//                        System.out.println("do not advertise");
+//                    }
+//                    count = 3;
+//                }
+//            }
+//        }
+//    }
+//}
+
+

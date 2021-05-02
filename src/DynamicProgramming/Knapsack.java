@@ -6,6 +6,7 @@ public class Knapsack {
         int wt[] = new int[] { 10, 20, 30 };
         int W = 55;
         int n = val.length;
+
         System.out.println(knapsack(W, wt, val, n));
         System.out.println("DP: " + knapsackDP(W, wt, val, n));
     }

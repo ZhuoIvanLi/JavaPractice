@@ -22,6 +22,9 @@
       <file url="file://$PROJECT_DIR$/src/Amazon/SerializeDeserializeBinaryTree.java" />
       <file url="file://$PROJECT_DIR$/src/Amazon/SlidingWindowMaximum.java" />
       <file url="file://$PROJECT_DIR$/src/Amazon/FetchItem.java" />
+      <file url="file://$PROJECT_DIR$/src/Amazon/NestedListWeightSum.java" />
+      <file url="file://$PROJECT_DIR$/src/Blind75/Binary/Summary.java" />
+      <file url="file://$PROJECT_DIR$/src/Amazon/LinuxFind.java" />
     </excludeFromCompile>
   </component>
 </project>

@@ -37,6 +37,7 @@ public class CardGame {
                         4. can have implementation in abstract class
                         5. can extends another java class and implement multiples interfaces. Interface can only
                             implement one interface.
+                        6. If a class extended abstract class has to implement all the abstract methods
      */
     public abstract class Card{
         private boolean available=true;

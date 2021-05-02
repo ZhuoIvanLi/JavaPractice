@@ -13,7 +13,7 @@ public class BasicSort {
     public static void main(String[] args) {
         int[] array = {1, 30, 587, 10, 49, 1004, 4, 67, 300};
 
-        mergeSort(array);
+        mergeSort2(array);
         //quickSort(array, 0, array.length - 1);
         //bubbleSort(array);
         //selectionSort(array);
@@ -92,6 +92,43 @@ public class BasicSort {
         // Merge the remaining values
         for(int i = 0; i <= mid-helperLeft; i++) {
             arr[current + i] = helper[helperLeft + i];
+        }
+    }
+
+    public static void mergeSort2(int[] arr) {
+        mergeSort2(arr, 0, arr.length - 1);
+    }
+
+    public static void mergeSort2(int[] arr, int low, int high) {
+        if (low < high) {
+            int mid = (low + high) / 2;
+            mergeSort2(arr, low, mid);
+            mergeSort2(arr, mid + 1, high);
+            merge2(arr, low, mid, high);
+        }
+    }
+
+    public static void merge2(int[] arr, int low, int mid, int high) {
+        int[] temp = new int[high - low + 1];
+
+        int left = low;
+        int right = mid + 1;
+        int current = 0;
+
+        while (left <= mid && right <= high) {
+            if (arr[left] <= arr[right]) {
+                temp[current++] = arr[left++];
+            } else {
+                temp[current++] = arr[right++];
+            }
+        }
+
+        while (left <= mid) {
+            temp[current++] = arr[left++];
+        }
+
+        for (int i = 0; i < current; i++) {
+            arr[low + i] = temp[i];
         }
     }
 

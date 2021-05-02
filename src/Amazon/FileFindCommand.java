@@ -3,8 +3,25 @@ package Amazon;
 import java.util.ArrayList;
 import java.util.List;
 
-// Ask for more info and define the core objects. Then drag a simple UML to clarify you points
-// In this case, we have File, FileCommand and Filter
+/**
+ * linux find command as an api ,the api willl support finding files that has given size requirements and a file with a certain format like
+ *
+ * 1. find all file >5mb
+ * 2. find all xml
+ *  Assume file class
+ *  {
+ *  getName()
+ *  directorylistfile()
+ *  getFile()
+ *
+ *  create a library flexible that is flexible
+ *  Design clases,interfaces.
+ *
+ *
+ * Ask for more info and define the core objects. Then drag a simple UML to clarify you points
+ * In this case, we have File, FileCommand and Filter
+ *
+ */
 public class FileFindCommand {
     class File {
         String name;
@@ -42,10 +59,16 @@ public class FileFindCommand {
         }
     }
 
+    public class NotADirectoryException extends Exception {
+        public NotADirectoryException(String m) {
+            super(m);
+        }
+    }
+
     class FindCommand {
-        public List<File> findWithFilters(File directory, List<Filter> filters) {
+        public List<File> findWithFilters(File directory, List<Filter> filters) throws NotADirectoryException{
             if (!directory.isDirectory) {
-                //return new NotADirectoryException();
+                throw new NotADirectoryException("Error! Not a Directory.");
             }
 
             List<File> output = new ArrayList<>();
@@ -68,6 +91,7 @@ public class FileFindCommand {
                     for (Filter filter : filters) {
                         if (!filter.apply(file)) {
                             selectFile = false;
+                            break;
                         }
                     }
 

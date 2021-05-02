@@ -8,6 +8,7 @@ import java.util.PriorityQueue;
  * 253: give meeting range, find how many meeting room needs and no conflicts
  * EX: input: [[0, 30],[5, 10],[15, 20]]
  *      output: 2
+ *
  */
 public class MeetingRoomII {
     public static void main(String[] args) {
@@ -25,9 +26,9 @@ public class MeetingRoomII {
     }
 
     public static int findRooms(int[][] intervals) {
-        int ans = 0;
         Arrays.sort(intervals, (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);
 
+        // smallest number out first
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int[] inter : intervals) {
             if (!pq.isEmpty() && pq.peek() <= inter[0]) {
